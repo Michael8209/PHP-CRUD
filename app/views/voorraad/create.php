@@ -2,17 +2,12 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nieuw item toevoegen</title>
-    <style>
-        body { font-family: sans-serif; max-width: 480px; margin: 2rem auto; }
-        label { display: block; margin-top: 1rem; font-weight: bold; }
-        input { width: 100%; padding: .4rem; box-sizing: border-box; }
-        .error { color: #b00020; font-size: .9rem; margin-top: .2rem; }
-        input.invalid { border: 1px solid #b00020; }
-        button { margin-top: 1.5rem; padding: .5rem 1rem; }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <main class="container">
     <h1>Nieuw item toevoegen</h1>
 
     <form action="index.php?action=store" method="post" novalidate>
@@ -34,8 +29,11 @@
             <?php endif; ?>
         <?php endforeach; ?>
 
-        <button type="submit">Opslaan</button>
-        <a href="index.php?action=index">Annuleren</a>
+        <div class="form-actions">
+            <button type="submit">Opslaan</button>
+            <a href="index.php?action=index">Annuleren</a>
+        </div>
     </form>
+    </main>
 </body>
 </html>

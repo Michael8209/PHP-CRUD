@@ -3,7 +3,7 @@
 function getPdo(): PDO
 {
     $pdo = new PDO(
-        'mysql:host=127.0.0.1;dbname=crud_app;charset=utf8mb4',
+        'mysql:host=127.0.0.1;dbname=database;charset=utf8mb4',
         'root',
         '',
         [

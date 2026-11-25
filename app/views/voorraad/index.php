@@ -2,23 +2,21 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Voorraad</title>
-    <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; }
-        table { border-collapse: collapse; width: 100%; }
-        th, td { border: 1px solid #ccc; padding: .4rem .6rem; text-align: left; }
-        .success { background: #e6f4ea; color: #1e6b34; padding: .7rem 1rem; margin-bottom: 1rem; }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <main class="container">
     <h1>Voorraad</h1>
 
     <?php if ($success): ?>
         <div class="success"><?= htmlspecialchars($success) ?></div>
     <?php endif; ?>
 
-    <p><a href="index.php?action=create">+ Nieuw item toevoegen</a></p>
+    <p class="actions"><a class="button" href="index.php?action=create">+ Nieuw item toevoegen</a></p>
 
+    <div class="table-wrap">
     <table>
         <tr><th>ID</th><th>Naam</th><th>Categorie</th><th>Beschrijving</th><th>Hoeveelheid</th></tr>
         <?php foreach ($items as $item): ?>
@@ -31,5 +29,7 @@
             </tr>
         <?php endforeach; ?>
     </table>
+    </div>
+    </main>
 </body>
 </html>
